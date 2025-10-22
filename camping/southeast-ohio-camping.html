@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Camping in Southeast Ohio - Ohio Outdoor Directory</title>
+    <meta name="description" content="Camp near Hocking Hills waterfalls, caves, and gorges, plus scenic lakes in Ohio's hill country. Complete camping guides with amenities and reservations.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* Import main theme variables and base styles */
+        :root {
+            --primary-color: #2d5a27;
+            --secondary-color: #8b4513;
+            --accent-color: #ff6b35;
+            --text-dark: #2c3e50;
+            --text-light: #ecf0f1;
+            --background-light: #f8f9fa;
+            --background-dark: #1a1a1a;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation - same as main site */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(45, 90, 39, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            font-size: 1.8rem;
+            color: var(--accent-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--accent-color);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-light);
+            margin: 3px 0;
+            transition: var(--transition);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=800&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(45, 90, 39, 0.8), rgba(26, 74, 26, 0.6));
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .breadcrumb {
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .breadcrumb a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--accent-color);
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 60px 0;
+            background: var(--background-light);
+        }
+
+        .content-intro {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            margin-bottom: 50px;
+            box-shadow: var(--shadow);
+        }
+
+        .content-intro h2 {
+            color: var(--text-dark);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .quick-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: var(--background-light);
+            border-radius: var(--border-radius);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Camping Cards */
+        .camping-section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .camping-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 30px;
+        }
+
+        .camping-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .camping-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .camping-image {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .camping-type-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .type-state-park { background: var(--success-color); }
+        .type-private { background: var(--warning-color); }
+        .type-primitive { background: #8b4513; }
+        .type-rv-park { background: #3498db; }
+
+        .camping-content {
+            padding: 25px;
+        }
+
+        .camping-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .camping-location {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .camping-meta {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: var(--background-light);
+            border-radius: 8px;
+        }
+
+        .meta-item {
+            text-align: center;
+        }
+
+        .meta-value {
+            font-weight: 600;
+            color: var(--primary-color);
+            display: block;
+            font-size: 1.1rem;
+        }
+
+        .meta-label {
+            font-size: 0.8rem;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        .camping-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .camping-amenities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 20px;
+        }
+
+        .amenity-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .camping-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #e55a2b;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Additional Sections */
+        .tips-section {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            margin-bottom: 50px;
+            box-shadow: var(--shadow);
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .tip-card {
+            padding: 25px;
+            background: var(--background-light);
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .tip-card h4 {
+            color: var(--text-dark);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tip-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Footer - simplified version */
+        .footer {
+            background: var(--background-dark);
+            color: var(--text-light);
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .back-to-main {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: var(--transition);
+        }
+
+        .back-to-main:hover {
+            background: var(--accent-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: var(--primary-color);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                padding: 20px 0;
+                gap: 20px;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .page-header p {
+                font-size: 1rem;
+            }
+
+            .camping-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .camping-meta {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .camping-actions {
+                flex-direction: column;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <i class="fas fa-mountain"></i>
+                <span>Ohio Outdoors</span>
+            </a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../hiking/northeast-ohio-trails.html" class="nav-link">Hiking</a></li>
+                <li><a href="../camping/northeast-ohio-camping.html" class="nav-link">Camping</a></li>
+                <li><a href="../parks/northeast-ohio-parks.html" class="nav-link">Parks</a></li>
+                <li><a href="../playgrounds/northeast-ohio-playgrounds.html" class="nav-link">Playgrounds</a></li>
+                <li><a href="../gear-recommendations.html" class="nav-link">Gear</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> / <a href="#">Camping</a> / Southeast Ohio
+                </div>
+                <h1>Best Camping in Southeast Ohio</h1>
+                <p>Camp near Hocking Hills waterfalls, caves, and gorges, plus scenic lakes in Ohio's hill country</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <div class="container">
+            <!-- Content Introduction -->
+            <div class="content-intro fade-in">
+                <h2>Explore Southeast Ohio's Premier Camping Destinations</h2>
+                <p>Southeast Ohio is home to the state's most dramatic landscapes, centered around the spectacular Hocking Hills region. Camp near stunning waterfalls, deep gorges, and ancient caves carved into sandstone cliffs. This area offers everything from state park campgrounds with modern amenities to private sites just steps from iconic trails. Whether you're exploring Old Man's Cave, hiking to Cedar Falls, or enjoying the peaceful lakes dotting the rolling hills, Southeast Ohio provides unforgettable camping adventures in Ohio's most scenic terrain.</p>
+
+                <div class="quick-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Campgrounds</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">800+</span>
+                        <span class="stat-label">Sites</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Hocking Hills</span>
+                        <span class="stat-label">Access</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Scenic</span>
+                        <span class="stat-label">Beauty</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Camping Section -->
+            <div class="camping-section">
+                <h2 class="section-title">Featured Camping Destinations</h2>
+                <div class="camping-grid">
+
+                    <!-- Camping Card 1 -->
+                    <div class="camping-card fade-in">
+                        <div class="camping-image" style="background-image: url('https://images.unsplash.com/photo-1478827387698-6ac2b84c5e62?w=600&h=400&fit=crop')">
+                            <div class="camping-type-badge type-state-park">State Park</div>
+                        </div>
+                        <div class="camping-content">
+                            <h3 class="camping-title">Hocking Hills State Park</h3>
+                            <div class="camping-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Logan, Ohio
+                            </div>
+                            <div class="camping-meta">
+                                <div class="meta-item">
+                                    <span class="meta-value">172</span>
+                                    <span class="meta-label">Campsites</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-value">Yes</span>
+                                    <span class="meta-label">Electric</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-value">$30</span>
+                                    <span class="meta-label">Per Night</span>
+                                </div>
+                            </div>
+                            <p class="camping-description">
+                                The ultimate base camp for exploring Hocking Hills' famous trails. Wake up minutes from Old Man's Cave, Ash Cave, and Cedar Falls. Modern campsites with electric hookups nestled in beautiful forest setting.
+                            </p>
+                            <div class="camping-amenities">
+                                <span class="amenity-tag">Trail Access</span>
+                                <span class="amenity-tag">Gorges</span>
+                                <span class="amenity-tag">Waterfalls</span>
+                                <span class="amenity-tag">Hiking</span>
+                                <span class="amenity-tag">Showers</span>
+                            </div>
+                            <div class="camping-actions">
+                                <a href="#" class="btn btn-primary">
+                                    <i class="fas fa-calendar-alt"></i> Reserve Now
+                                </a>
+                                <a href="#" class="btn btn-secondary">
+                                    <i class="fas fa-info-circle"></i> More Info
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Camping Card 2 -->
+                    <div class="camping-card fade-in">
+                        <div class="camping-image" style="background-image: url('https://images.unsplash.com/photo-1504851149312-7a075b496cc5?w=600&h=400&fit=crop')">
+                            <div class="camping-type-badge type-private">Private</div>
+                        </div>
+                        <div class="camping-content">
+                            <h3 class="camping-title">Old Man's Cave Chalets & Campground</h3>
+                            <div class="camping-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Logan, Ohio
+                            </div>
+                            <div class="camping-meta">
+                                <div class="meta-item">
+                                    <span class="meta-value">50</span>
+                                    <span class="meta-label">Sites</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-value">Full</span>
+                                    <span class="meta-label">Hookups</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-value">$35</span>
+                                    <span class="meta-label">Per Night</span>
+                                </div>
+                            </div>
+                            <p class="camping-description">
+                                Premium private campground within walking distance to Old Man's Cave trailhead. Full hookups available with modern facilities. Perfect for visitors who want convenience and comfort near the area's top attraction.
+                            </p>
+                            <div class="camping-amenities">
+                                <span class="amenity-tag">Old Man's Cave</span>
+                                <span class="amenity-tag">Walking Distance</span>
+                                <span class="amenity-tag">Full Hookups</span>
+                                <span class="amenity-tag">Wi-Fi</span>
+                                <span class="amenity-tag">Store</span>
+                            </div>
+                            <div class="camping-actions">
+                                <a href="#" class="btn btn-primary">
+                                    <i class="fas fa-calendar-alt"></i> Reserve Now
+                                </a>
+                                <a href="#" class="btn btn-secondary">
+                                    <i class="fas fa-info-circle"></i> More Info
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Camping Card 3 -->
+                    <div class="camping-card fade-in">
+                        <div class="camping-image" style="background-image: url('https://images.unsplash.com/photo-1445308394109-4ec2920981b1?w=600&h=400&fit=crop')">
+                            <div class="camping-type-badge type-state-park">State Park</div>
+                        </div>
+                        <div class="camping-content">
+                            <h3 class="camping-title">Lake Logan State Park</h3>
+                            <div class="camping-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Logan, Ohio
+                            </div>
+                            <div class="camping-meta">
+                                <div class="meta-item">
+                                    <span class="meta-value">35</span>
+                                    <span class="meta-label">Sites</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-value">Yes</span>
+                                    <span class="meta-label">Electric</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-value">$26</span>
+                                    <span class="meta-label">Per Night</span>
+                                </div>
+                            </div>
+                            <p class="camping-description">
+                                Peaceful lakeside camping with swimming beach, boating, and fishing. Smaller, quieter alternative to main Hocking Hills State Park while still offering convenient access to the region's hiking trails and attractions.
+                            </p>
+                            <div class="camping-amenities">
+                                <span class="amenity-tag">Lake Swimming</span>
+                                <span class="amenity-tag">Boating</span>
+                                <span class="amenity-tag">Fishing</span>
+                                <span class="amenity-tag">Beach</span>
+                                <span class="amenity-tag">Quiet</span>
+                            </div>
+                            <div class="camping-actions">
+                                <a href="#" class="btn btn-primary">
+                                    <i class="fas fa-calendar-alt"></i> Reserve Now
+                                </a>
+                                <a href="#" class="btn btn-secondary">
+                                    <i class="fas fa-info-circle"></i> More Info
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Camping Card 4 -->
+                    <div class="camping-card fade-in">
+                        <div class="camping-image" style="background-image: url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&h=400&fit=crop')">
+                            <div class="camping-type-badge type-state-park">State Park</div>
+                        </div>
+                        <div class="camping-content">
+                            <h3 class="camping-title">Salt Fork State Park</h3>
+                            <div class="camping-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Cambridge, Ohio
+                            </div>
+                            <div class="camping-meta">
+                                <div class="meta-item">
+                                    <span class="meta-value">212</span>
+                                    <span class="meta-label">Sites</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-value">Yes</span>
+                                    <span class="meta-label">Electric</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-value">$28</span>
+                                    <span class="meta-label">Per Night</span>
+                                </div>
+                            </div>
+                            <p class="camping-description">
+                                Ohio's largest state park offers extensive camping on a beautiful lake. Features hiking trails, golf course, marina, and swimming beach. Perfect for families wanting diverse activities beyond just hiking.
+                            </p>
+                            <div class="camping-amenities">
+                                <span class="amenity-tag">Largest Park</span>
+                                <span class="amenity-tag">Lake</span>
+                                <span class="amenity-tag">Golf</span>
+                                <span class="amenity-tag">Marina</span>
+                                <span class="amenity-tag">Trails</span>
+                            </div>
+                            <div class="camping-actions">
+                                <a href="#" class="btn btn-primary">
+                                    <i class="fas fa-calendar-alt"></i> Reserve Now
+                                </a>
+                                <a href="#" class="btn btn-secondary">
+                                    <i class="fas fa-info-circle"></i> More Info
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Camping Card 5 -->
+                    <div class="camping-card fade-in">
+                        <div class="camping-image" style="background-image: url('https://images.unsplash.com/photo-1571863533956-01c88e79957e?w=600&h=400&fit=crop')">
+                            <div class="camping-type-badge type-state-park">State Park</div>
+                        </div>
+                        <div class="camping-content">
+                            <h3 class="camping-title">Burr Oak State Park</h3>
+                            <div class="camping-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Glouster, Ohio
+                            </div>
+                            <div class="camping-meta">
+                                <div class="meta-item">
+                                    <span class="meta-value">110</span>
+                                    <span class="meta-label">Sites</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-value">Yes</span>
+                                    <span class="meta-label">Electric</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-value">$26</span>
+                                    <span class="meta-label">Per Night</span>
+                                </div>
+                            </div>
+                            <p class="camping-description">
+                                Scenic camping with beautiful lake views and peaceful wooded sites. Excellent hiking trails including backpacking options, lake fishing, and a quiet setting perfect for nature lovers seeking tranquility.
+                            </p>
+                            <div class="camping-amenities">
+                                <span class="amenity-tag">Lake Views</span>
+                                <span class="amenity-tag">Hiking</span>
+                                <span class="amenity-tag">Quiet</span>
+                                <span class="amenity-tag">Fishing</span>
+                                <span class="amenity-tag">Backpacking</span>
+                            </div>
+                            <div class="camping-actions">
+                                <a href="#" class="btn btn-primary">
+                                    <i class="fas fa-calendar-alt"></i> Reserve Now
+                                </a>
+                                <a href="#" class="btn btn-secondary">
+                                    <i class="fas fa-info-circle"></i> More Info
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Camping Card 6 -->
+                    <div class="camping-card fade-in">
+                        <div class="camping-image" style="background-image: url('https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=600&h=400&fit=crop')">
+                            <div class="camping-type-badge type-state-park">State Park</div>
+                        </div>
+                        <div class="camping-content">
+                            <h3 class="camping-title">Strouds Run State Park</h3>
+                            <div class="camping-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Athens, Ohio
+                            </div>
+                            <div class="camping-meta">
+                                <div class="meta-item">
+                                    <span class="meta-value">75</span>
+                                    <span class="meta-label">Sites</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-value">Yes</span>
+                                    <span class="meta-label">Electric</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-value">$24</span>
+                                    <span class="meta-label">Per Night</span>
+                                </div>
+                            </div>
+                            <p class="camping-description">
+                                Camping near Ohio University in Athens with lake access and quality hiking trails. Popular with students and families alike. Beautiful forested setting with swimming beach and scenic overlooks.
+                            </p>
+                            <div class="camping-amenities">
+                                <span class="amenity-tag">Near Athens</span>
+                                <span class="amenity-tag">Lake</span>
+                                <span class="amenity-tag">Hiking Trails</span>
+                                <span class="amenity-tag">Swimming</span>
+                                <span class="amenity-tag">Overlooks</span>
+                            </div>
+                            <div class="camping-actions">
+                                <a href="#" class="btn btn-primary">
+                                    <i class="fas fa-calendar-alt"></i> Reserve Now
+                                </a>
+                                <a href="#" class="btn btn-secondary">
+                                    <i class="fas fa-info-circle"></i> More Info
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Camping Tips Section -->
+            <div class="tips-section">
+                <h2 class="section-title">Essential Camping Tips for Southeast Ohio</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <h4><i class="fas fa-calendar-check"></i> Peak Season Planning</h4>
+                        <p>Hocking Hills campgrounds fill up months in advance for fall foliage season (September-October) and summer weekends. Book as early as possible through Ohio State Parks. Consider weekday visits for better availability and fewer crowds on trails.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4><i class="fas fa-hiking"></i> Trail Proximity</h4>
+                        <p>Hocking Hills State Park campground is closest to the main trails, but private campgrounds like Old Man's Cave Chalets offer walking distance access. Salt Fork and Burr Oak provide excellent hiking with fewer crowds than Hocking Hills.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4><i class="fas fa-cloud-rain"></i> Weather & Terrain</h4>
+                        <p>Hill country means cooler temperatures and more rain than northern Ohio. Pack layers and quality rain gear. Trails can be slippery after rain. Spring brings waterfalls at peak flow, while fall offers stunning foliage.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4><i class="fas fa-shoe-prints"></i> Hiking Preparation</h4>
+                        <p>Trails feature steep gorges, stone steps, and uneven terrain. Wear proper hiking boots with good traction. Bring plenty of water and snacks. Popular trails like Old Man's Cave can be crowded on weekends - arrive early or visit weekdays.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4><i class="fas fa-utensils"></i> Food & Supplies</h4>
+                        <p>Logan is the main town near Hocking Hills with grocery stores and restaurants. Stock up on supplies before reaching your campground. Many remote areas have limited cell service, so plan ahead and download maps offline.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4><i class="fas fa-camera"></i> Photography Tips</h4>
+                        <p>Best photography is early morning or overcast days when waterfalls and caves are evenly lit. Tripod recommended for low-light cave interiors. Fall foliage peaks mid-October. Respect trail closures and stay on designated paths.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <a href="../index.html" class="back-to-main">
+                <i class="fas fa-arrow-left"></i> Back to Ohio Outdoor Directory
+            </a>
+            <p>&copy; 2024 Ohio Outdoor Directory. Discover the best outdoor adventures in Ohio.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for interactive functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile navigation toggle
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+
+            hamburger.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+
+            // Smooth scrolling for anchor links
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Fade in animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all fade-in elements
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+
+            // Add hover effects to camping cards
+            const campingCards = document.querySelectorAll('.camping-card');
+            campingCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-12px)';
+                });
+
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(-8px)';
+                });
+            });
+
+            // Navbar background change on scroll
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.style.background = 'rgba(45, 90, 39, 0.98)';
+                } else {
+                    navbar.style.background = 'rgba(45, 90, 39, 0.95)';
+                }
+            });
+
+            // Button click tracking (for analytics)
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    // Add your analytics tracking code here
+                    console.log('Button clicked:', this.textContent.trim());
+                });
+            });
+        });
+    </script>
+</body>
+</html>
