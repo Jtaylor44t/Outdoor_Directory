@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohio Outdoor Directory - Discover Adventure in the Buckeye State</title>
+    <meta name="description" content="Your complete guide to hiking trails, camping spots, parks, and playgrounds across Ohio. Discover the best outdoor adventures in Northeast, Northwest, Central, Southeast, and Southwest Ohio.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-mountain"></i>
+                <span>Ohio Outdoors</span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Hiking Trails <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="hiking/northeast-ohio-trails.html">Northeast Ohio</a></li>
+                        <li><a href="hiking/northwest-ohio-trails.html">Northwest Ohio</a></li>
+                        <li><a href="hiking/central-ohio-trails.html">Central Ohio</a></li>
+                        <li><a href="hiking/southeast-ohio-trails.html">Southeast Ohio</a></li>
+                        <li><a href="hiking/southwest-ohio-trails.html">Southwest Ohio</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Camping <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="camping/northeast-ohio-camping.html">Northeast Ohio</a></li>
+                        <li><a href="camping/northwest-ohio-camping.html">Northwest Ohio</a></li>
+                        <li><a href="camping/central-ohio-camping.html">Central Ohio</a></li>
+                        <li><a href="camping/southeast-ohio-camping.html">Southeast Ohio</a></li>
+                        <li><a href="camping/southwest-ohio-camping.html">Southwest Ohio</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Parks <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="parks/northeast-ohio-parks.html">Northeast Ohio</a></li>
+                        <li><a href="parks/northwest-ohio-parks.html">Northwest Ohio</a></li>
+                        <li><a href="parks/central-ohio-parks.html">Central Ohio</a></li>
+                        <li><a href="parks/southeast-ohio-parks.html">Southeast Ohio</a></li>
+                        <li><a href="parks/southwest-ohio-parks.html">Southwest Ohio</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Playgrounds <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="playgrounds/northeast-ohio-playgrounds.html">Northeast Ohio</a></li>
+                        <li><a href="playgrounds/northwest-ohio-playgrounds.html">Northwest Ohio</a></li>
+                        <li><a href="playgrounds/central-ohio-playgrounds.html">Central Ohio</a></li>
+                        <li><a href="playgrounds/southeast-ohio-playgrounds.html">Southeast Ohio</a></li>
+                        <li><a href="playgrounds/southwest-ohio-playgrounds.html">Southwest Ohio</a></li>
+                    </ul>
+                </li>
+                <li><a href="gear-recommendations.html" class="nav-link">Gear & Recommendations</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Discover Ohio's Outdoor Adventures</h1>
+            <p>Your ultimate guide to hiking trails, camping spots, parks, and family-friendly outdoor activities across the Buckeye State</p>
+            <div class="hero-buttons">
+                <a href="#featured" class="btn btn-primary">Explore Now</a>
+                <a href="gear-recommendations.html" class="btn btn-secondary">Recommended Gear</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Quick Navigation Cards -->
+    <section class="quick-nav" id="featured">
+        <div class="container">
+            <h2>What Would You Like to Explore?</h2>
+            <div class="cards-grid">
+                <div class="activity-card" data-activity="hiking">
+                    <div class="card-icon">
+                        <i class="fas fa-hiking"></i>
+                    </div>
+                    <h3>Hiking Trails</h3>
+                    <p>Discover scenic trails from gentle walks to challenging hikes across all regions of Ohio</p>
+                    <a href="#hiking-regions" class="card-link">Find Trails</a>
+                </div>
+                <div class="activity-card" data-activity="camping">
+                    <div class="card-icon">
+                        <i class="fas fa-campground"></i>
+                    </div>
+                    <h3>Camping</h3>
+                    <p>Find the perfect campground for your next outdoor adventure, from rustic to full-service sites</p>
+                    <a href="#camping-regions" class="card-link">Find Campgrounds</a>
+                </div>
+                <div class="activity-card" data-activity="parks">
+                    <div class="card-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>State & Local Parks</h3>
+                    <p>Explore Ohio's beautiful state parks and hidden local gems perfect for day trips</p>
+                    <a href="#parks-regions" class="card-link">Explore Parks</a>
+                </div>
+                <div class="activity-card" data-activity="playgrounds">
+                    <div class="card-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Family Playgrounds</h3>
+                    <p>Family-friendly playgrounds and recreational areas perfect for kids and outdoor fun</p>
+                    <a href="#playground-regions" class="card-link">Find Playgrounds</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regional Sections -->
+    <section class="regions-section" id="hiking-regions">
+        <div class="container">
+            <h2>Hiking Trails by Region</h2>
+            <div class="regions-grid">
+                <div class="region-card">
+                    <div class="region-image" style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500&h=300&fit=crop')"></div>
+                    <div class="region-content">
+                        <h3>Northeast Ohio</h3>
+                        <p>Cuyahoga Valley National Park, Cleveland Metroparks, and scenic lakefront trails</p>
+                        <a href="hiking/northeast-ohio-trails.html" class="region-btn">Explore Trails</a>
+                    </div>
+                </div>
+                <div class="region-card">
+                    <div class="region-image" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop')"></div>
+                    <div class="region-content">
+                        <h3>Northwest Ohio</h3>
+                        <p>Oak Openings, Maumee Bay, and prairie hiking experiences</p>
+                        <a href="hiking/northwest-ohio-trails.html" class="region-btn">Explore Trails</a>
+                    </div>
+                </div>
+                <div class="region-card">
+                    <div class="region-image" style="background-image: url('https://images.unsplash.com/photo-1551632811-561732d1e306?w=500&h=300&fit=crop')"></div>
+                    <div class="region-content">
+                        <h3>Central Ohio</h3>
+                        <p>Columbus Metro Parks, Hocking Hills, and diverse terrain adventures</p>
+                        <a href="hiking/central-ohio-trails.html" class="region-btn">Explore Trails</a>
+                    </div>
+                </div>
+                <div class="region-card">
+                    <div class="region-image" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop')"></div>
+                    <div class="region-content">
+                        <h3>Southeast Ohio</h3>
+                        <p>Hocking Hills State Park, Wayne National Forest, and rugged terrain</p>
+                        <a href="hiking/southeast-ohio-trails.html" class="region-btn">Explore Trails</a>
+                    </div>
+                </div>
+                <div class="region-card">
+                    <div class="region-image" style="background-image: url('https://images.unsplash.com/photo-1464822759844-d150ad6ba46f?w=500&h=300&fit=crop')"></div>
+                    <div class="region-content">
+                        <h3>Southwest Ohio</h3>
+                        <p>Cincinnati Parks, Little Miami Scenic Trail, and river valley hikes</p>
+                        <a href="hiking/southwest-ohio-trails.html" class="region-btn">Explore Trails</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Similar sections for camping, parks, and playgrounds would follow the same pattern -->
+    
+    <!-- Featured Content Section -->
+    <section class="featured-content">
+        <div class="container">
+            <h2>Featured Adventures</h2>
+            <div class="featured-grid">
+                <article class="featured-article">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1551632811-561732d1e306?w=400&h=250&fit=crop')"></div>
+                    <div class="article-content">
+                        <span class="article-category">Hiking</span>
+                        <h3>Top 10 Must-Hike Trails in Hocking Hills</h3>
+                        <p>Discover the most breathtaking trails in Ohio's premier hiking destination...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="featured-article">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1504851149312-7a075b496cc7?w=400&h=250&fit=crop')"></div>
+                    <div class="article-content">
+                        <span class="article-category">Camping</span>
+                        <h3>Best Family Camping Spots Near Cleveland</h3>
+                        <p>Perfect campgrounds for families looking for adventure close to the city...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="featured-article">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=250&fit=crop')"></div>
+                    <div class="article-content">
+                        <span class="article-category">Parks</span>
+                        <h3>Hidden Gems: Ohio's Lesser-Known State Parks</h3>
+                        <p>Explore Ohio's quiet treasures away from the crowds...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated on Ohio's Best Outdoor Adventures</h2>
+                <p>Get weekly updates on new trails, camping spots, and outdoor gear recommendations</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-mountain"></i>
+                        <span>Ohio Outdoors</span>
+                    </div>
+                    <p>Your comprehensive guide to outdoor adventures across Ohio. Discover trails, camping, parks, and family fun.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Activities</h4>
+                    <ul>
+                        <li><a href="#">Hiking Trails</a></li>
+                        <li><a href="#">Camping</a></li>
+                        <li><a href="#">State Parks</a></li>
+                        <li><a href="#">Playgrounds</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Regions</h4>
+                    <ul>
+                        <li><a href="#">Northeast Ohio</a></li>
+                        <li><a href="#">Northwest Ohio</a></li>
+                        <li><a href="#">Central Ohio</a></li>
+                        <li><a href="#">Southeast Ohio</a></li>
+                        <li><a href="#">Southwest Ohio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="gear-recommendations.html">Gear Recommendations</a></li>
+                        <li><a href="#">Safety Tips</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ohio Outdoors Directory. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
